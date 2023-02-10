@@ -107,8 +107,8 @@ class GlassPanel(Node):
         self.text.pose.orientation.z = 0.0
         self.text.pose.orientation.w = 1.0
 
-        self.text.scale.x = 0.1
-        self.text.scale.y = 0.1
+        self.text.scale.x = 0.01
+        self.text.scale.y = 0.01
         self.text.scale.z = 0.1
 
         self.text.color.a = 1.0
@@ -116,7 +116,7 @@ class GlassPanel(Node):
         self.text.color.g = 1.0
         self.text.color.b = 1.0
 
-        self.text.text = f"The target oreintation\nis rotation around\nx-axis by\n{round(self.e_x,4)} degrees"
+        self.text.text = f"The target oreintation is rotation around x-axis by {round(self.e_x,4)} degrees"
 
         self.array.markers.append(self.text)
 
