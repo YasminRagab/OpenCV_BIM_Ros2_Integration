@@ -1,0 +1,4 @@
+aruco_node2:
+  ros__parameters:
+  	marker_size : 0.0515
+  	camera_frame: "default_cam"

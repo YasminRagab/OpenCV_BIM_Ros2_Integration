@@ -1,0 +1,1705 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author />
+      <authoring_tool>Rhinoceros 7.18.22124.3001</authoring_tool>
+      <comments>Output from Rhinoceros COLLADA Exporter</comments>
+      <copyright />
+      <source_data />
+    </contributor>
+    <created>2023-02-07T00:26:53Z</created>
+    <modified>2023-02-07T00:26:53Z</modified>
+    <unit meter="0.001" name="Millimeters" />
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-Perspective" name="Camera-Perspective">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov>52.752880</xfov>
+            <aspect_ratio>2.066216</aspect_ratio>
+            <znear>17119.609285</znear>
+            <zfar>26228.502118</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+    </camera>
+    <camera id="Camera-Top" name="Camera-Top">
+      <optics>
+        <technique_common>
+          <orthographic>
+            <xmag>1.0</xmag>
+            <aspect_ratio>2.079235</aspect_ratio>
+            <znear>0.005000</znear>
+            <zfar>4153.776849</zfar>
+          </orthographic>
+        </technique_common>
+      </optics>
+    </camera>
+    <camera id="Camera-Front" name="Camera-Front">
+      <optics>
+        <technique_common>
+          <orthographic>
+            <xmag>1.0</xmag>
+            <aspect_ratio>2.079235</aspect_ratio>
+            <znear>0.005000</znear>
+            <zfar>5720.048471</zfar>
+          </orthographic>
+        </technique_common>
+      </optics>
+    </camera>
+    <camera id="Camera-Right" name="Camera-Right">
+      <optics>
+        <technique_common>
+          <orthographic>
+            <xmag>1.0</xmag>
+            <aspect_ratio>2.076503</aspect_ratio>
+            <znear>0.005000</znear>
+            <zfar>7920.065261</zfar>
+          </orthographic>
+        </technique_common>
+      </optics>
+    </camera>
+  </library_cameras>
+  <library_materials>
+    <material id="bba94320-ce07-4b11-8a0c-2efa117054ef">
+      <instance_effect url="#fx-bba94320-ce07-4b11-8a0c-2efa117054ef" />
+    </material>
+    <material id="a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+      <instance_effect url="#fx-a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+    </material>
+    <material id="e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+      <instance_effect url="#fx-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="fx-bba94320-ce07-4b11-8a0c-2efa117054ef">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color>0.000000 0.800000 0.800000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float>0.200000</float>
+            </shininess>
+            <reflective>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float>1.000000</float>
+            </reflectivity>
+            <transparent>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float>1.000000</float>
+            </transparency>
+            <index_of_refraction>
+              <float>0.000000</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="Rhino">
+          <appearance_hash>2319275726</appearance_hash>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="fx-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color>0.400000 0.000000 0.800000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float>0.200000</float>
+            </shininess>
+            <reflective>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float>1.000000</float>
+            </reflectivity>
+            <transparent>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float>1.000000</float>
+            </transparency>
+            <index_of_refraction>
+              <float>0.000000</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="Rhino">
+          <appearance_hash>2505654539</appearance_hash>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="fx-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color>0.000000 0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color>0.400000 0.800000 0.600000 1.000000</color>
+            </diffuse>
+            <specular>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </specular>
+            <shininess>
+              <float>0.200000</float>
+            </shininess>
+            <reflective>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </reflective>
+            <reflectivity>
+              <float>1.000000</float>
+            </reflectivity>
+            <transparent>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float>1.000000</float>
+            </transparency>
+            <index_of_refraction>
+              <float>0.000000</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="Rhino">
+          <appearance_hash>1723996335</appearance_hash>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="mesh-aac1deb5-abce-4d13-b0e2-066e65ec6898">
+      <mesh>
+        <source id="lib-position-aac1deb5-abce-4d13-b0e2-066e65ec6898" name="position">
+          <float_array id="lib-position-array-aac1deb5-abce-4d13-b0e2-066e65ec6898" count="12" digits="17" magnitude="308">3280.55004882813 1786.29711914063 3102.97216796875 2119.44995117188 1786.29711914063 3102.97216796875 2119.44995117188 1769.62060546875 2979.08959960938 3280.55004882813 1769.62060546875 2979.08959960938</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-aac1deb5-abce-4d13-b0e2-066e65ec6898" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-aac1deb5-abce-4d13-b0e2-066e65ec6898" name="normal">
+          <float_array id="lib-normal-array-aac1deb5-abce-4d13-b0e2-066e65ec6898" count="12">0.000000 -0.991061 0.133412 0.000000 -0.991061 0.133412 0.000000 -0.991061 0.133412 0.000000 -0.991061 0.133412</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-aac1deb5-abce-4d13-b0e2-066e65ec6898" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-aac1deb5-abce-4d13-b0e2-066e65ec6898">
+          <input semantic="POSITION" source="#lib-position-aac1deb5-abce-4d13-b0e2-066e65ec6898" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-aac1deb5-abce-4d13-b0e2-066e65ec6898" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-aac1deb5-abce-4d13-b0e2-066e65ec6898" />
+          <p>0 0 1 1 3 3 1 1 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a67ee7b0-f462-455f-9559-7842d35a9f0d">
+      <mesh>
+        <source id="lib-position-a67ee7b0-f462-455f-9559-7842d35a9f0d" name="position">
+          <float_array id="lib-position-array-a67ee7b0-f462-455f-9559-7842d35a9f0d" count="12" digits="17" magnitude="308">2119.44995117188 1786.29711914063 3102.97216796875 2119.44995117188 1131.10693359375 3191.1708984375 2119.44995117188 1114.43041992188 3067.28833007813 2119.44995117188 1769.62060546875 2979.08959960938</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a67ee7b0-f462-455f-9559-7842d35a9f0d" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a67ee7b0-f462-455f-9559-7842d35a9f0d" name="normal">
+          <float_array id="lib-normal-array-a67ee7b0-f462-455f-9559-7842d35a9f0d" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a67ee7b0-f462-455f-9559-7842d35a9f0d" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a67ee7b0-f462-455f-9559-7842d35a9f0d">
+          <input semantic="POSITION" source="#lib-position-a67ee7b0-f462-455f-9559-7842d35a9f0d" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a67ee7b0-f462-455f-9559-7842d35a9f0d" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a67ee7b0-f462-455f-9559-7842d35a9f0d" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-abf5e270-0dfc-4ef7-b648-40a724f49ea0">
+      <mesh>
+        <source id="lib-position-abf5e270-0dfc-4ef7-b648-40a724f49ea0" name="position">
+          <float_array id="lib-position-array-abf5e270-0dfc-4ef7-b648-40a724f49ea0" count="12" digits="17" magnitude="308">2119.44995117188 1131.10693359375 3191.1708984375 3280.55004882813 1131.10693359375 3191.1708984375 3280.55004882813 1114.43041992188 3067.28833007813 2119.44995117188 1114.43041992188 3067.28833007813</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-abf5e270-0dfc-4ef7-b648-40a724f49ea0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-abf5e270-0dfc-4ef7-b648-40a724f49ea0" name="normal">
+          <float_array id="lib-normal-array-abf5e270-0dfc-4ef7-b648-40a724f49ea0" count="12">0.000000 0.991061 -0.133412 0.000000 0.991061 -0.133412 0.000000 0.991061 -0.133412 0.000000 0.991061 -0.133412</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-abf5e270-0dfc-4ef7-b648-40a724f49ea0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-abf5e270-0dfc-4ef7-b648-40a724f49ea0">
+          <input semantic="POSITION" source="#lib-position-abf5e270-0dfc-4ef7-b648-40a724f49ea0" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-abf5e270-0dfc-4ef7-b648-40a724f49ea0" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-abf5e270-0dfc-4ef7-b648-40a724f49ea0" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-c5704f4f-592a-4c1a-a0d5-0234826c1d97">
+      <mesh>
+        <source id="lib-position-c5704f4f-592a-4c1a-a0d5-0234826c1d97" name="position">
+          <float_array id="lib-position-array-c5704f4f-592a-4c1a-a0d5-0234826c1d97" count="12" digits="17" magnitude="308">3280.55004882813 1131.10693359375 3191.1708984375 3280.55004882813 1786.29711914063 3102.97216796875 3280.55004882813 1769.62060546875 2979.08959960938 3280.55004882813 1114.43041992188 3067.28833007813</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-c5704f4f-592a-4c1a-a0d5-0234826c1d97" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-c5704f4f-592a-4c1a-a0d5-0234826c1d97" name="normal">
+          <float_array id="lib-normal-array-c5704f4f-592a-4c1a-a0d5-0234826c1d97" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-c5704f4f-592a-4c1a-a0d5-0234826c1d97" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-c5704f4f-592a-4c1a-a0d5-0234826c1d97">
+          <input semantic="POSITION" source="#lib-position-c5704f4f-592a-4c1a-a0d5-0234826c1d97" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-c5704f4f-592a-4c1a-a0d5-0234826c1d97" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-c5704f4f-592a-4c1a-a0d5-0234826c1d97" />
+          <p>3 3 0 0 1 1 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a2240062-3184-46a6-9055-db27ebbe5ed1">
+      <mesh>
+        <source id="lib-position-a2240062-3184-46a6-9055-db27ebbe5ed1" name="position">
+          <float_array id="lib-position-array-a2240062-3184-46a6-9055-db27ebbe5ed1" count="24" digits="17" magnitude="308">7200 3100 2926.12744140625 4.33146834372122E-12 3100 2926.12744140625 4.33146834372122E-12 -2100 3626.12744140625 7200 -2100 3626.12744140625 3280.55004882813 1786.29711914063 3102.97216796875 3280.55004882813 1131.10693359375 3191.1708984375 2119.44995117188 1131.10693359375 3191.1708984375 2119.44995117188 1786.29711914063 3102.97216796875</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-position-array-a2240062-3184-46a6-9055-db27ebbe5ed1" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a2240062-3184-46a6-9055-db27ebbe5ed1" name="normal">
+          <float_array id="lib-normal-array-a2240062-3184-46a6-9055-db27ebbe5ed1" count="24">0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-normal-array-a2240062-3184-46a6-9055-db27ebbe5ed1" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a2240062-3184-46a6-9055-db27ebbe5ed1">
+          <input semantic="POSITION" source="#lib-position-a2240062-3184-46a6-9055-db27ebbe5ed1" />
+        </vertices>
+        <triangles count="8" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a2240062-3184-46a6-9055-db27ebbe5ed1" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a2240062-3184-46a6-9055-db27ebbe5ed1" />
+          <p>0 0 4 4 5 5 4 4 0 0 1 1 5 5 2 2 3 3 6 6 7 7 1 1 6 6 2 2 5 5 4 4 1 1 7 7 5 5 3 3 0 0 6 6 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ab48a763-c436-4729-b9b7-fdfb3329af70">
+      <mesh>
+        <source id="lib-position-ab48a763-c436-4729-b9b7-fdfb3329af70" name="position">
+          <float_array id="lib-position-array-ab48a763-c436-4729-b9b7-fdfb3329af70" count="24" digits="17" magnitude="308">4.33146834372122E-12 3100 2800 7200 3100 2800 7200 -2100 3500 4.33146834372122E-12 -2100 3500 3280.55004882813 1769.62060546875 2979.08959960938 2119.44995117188 1769.62060546875 2979.08959960938 2119.44995117188 1114.43041992188 3067.28833007813 3280.55004882813 1114.43041992188 3067.28833007813</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-position-array-ab48a763-c436-4729-b9b7-fdfb3329af70" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ab48a763-c436-4729-b9b7-fdfb3329af70" name="normal">
+          <float_array id="lib-normal-array-ab48a763-c436-4729-b9b7-fdfb3329af70" count="24">0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061 0.000000 -0.133412 -0.991061</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-normal-array-ab48a763-c436-4729-b9b7-fdfb3329af70" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ab48a763-c436-4729-b9b7-fdfb3329af70">
+          <input semantic="POSITION" source="#lib-position-ab48a763-c436-4729-b9b7-fdfb3329af70" />
+        </vertices>
+        <triangles count="8" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ab48a763-c436-4729-b9b7-fdfb3329af70" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ab48a763-c436-4729-b9b7-fdfb3329af70" />
+          <p>7 7 4 4 1 1 0 0 1 1 4 4 7 7 2 2 3 3 0 0 5 5 6 6 7 7 1 1 2 2 0 0 4 4 5 5 7 7 3 3 6 6 0 0 6 6 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c">
+      <mesh>
+        <source id="lib-position-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" name="position">
+          <float_array id="lib-position-array-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" count="12" digits="17" magnitude="308">7200 3100 2926.12744140625 7200 -2100 3626.12744140625 7200 -2100 3500 7200 3100 2800</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" name="normal">
+          <float_array id="lib-normal-array-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c">
+          <input semantic="POSITION" source="#lib-position-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a5375508-6c33-499c-945e-1ddd23c182c1">
+      <mesh>
+        <source id="lib-position-a5375508-6c33-499c-945e-1ddd23c182c1" name="position">
+          <float_array id="lib-position-array-a5375508-6c33-499c-945e-1ddd23c182c1" count="12" digits="17" magnitude="308">7200 -2100 3626.12744140625 4.33146834372122E-12 -2100 3626.12744140625 4.33146834372122E-12 -2100 3500 7200 -2100 3500</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a5375508-6c33-499c-945e-1ddd23c182c1" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a5375508-6c33-499c-945e-1ddd23c182c1" name="normal">
+          <float_array id="lib-normal-array-a5375508-6c33-499c-945e-1ddd23c182c1" count="12">0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a5375508-6c33-499c-945e-1ddd23c182c1" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a5375508-6c33-499c-945e-1ddd23c182c1">
+          <input semantic="POSITION" source="#lib-position-a5375508-6c33-499c-945e-1ddd23c182c1" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a5375508-6c33-499c-945e-1ddd23c182c1" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a5375508-6c33-499c-945e-1ddd23c182c1" />
+          <p>1 1 2 2 3 3 1 1 3 3 0 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-bc19a367-25b6-448b-82e6-7f171a192e27">
+      <mesh>
+        <source id="lib-position-bc19a367-25b6-448b-82e6-7f171a192e27" name="position">
+          <float_array id="lib-position-array-bc19a367-25b6-448b-82e6-7f171a192e27" count="12" digits="17" magnitude="308">4.33146834372122E-12 -2100 3626.12744140625 4.33146834372122E-12 3100 2926.12744140625 4.33146834372122E-12 3100 2800 4.33146834372122E-12 -2100 3500</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-bc19a367-25b6-448b-82e6-7f171a192e27" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-bc19a367-25b6-448b-82e6-7f171a192e27" name="normal">
+          <float_array id="lib-normal-array-bc19a367-25b6-448b-82e6-7f171a192e27" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-bc19a367-25b6-448b-82e6-7f171a192e27" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-bc19a367-25b6-448b-82e6-7f171a192e27">
+          <input semantic="POSITION" source="#lib-position-bc19a367-25b6-448b-82e6-7f171a192e27" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-bc19a367-25b6-448b-82e6-7f171a192e27" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-bc19a367-25b6-448b-82e6-7f171a192e27" />
+          <p>1 1 2 2 3 3 1 1 3 3 0 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f">
+      <mesh>
+        <source id="lib-position-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" name="position">
+          <float_array id="lib-position-array-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" count="12" digits="17" magnitude="308">4.33146834372122E-12 3100 2926.12744140625 7200 3100 2926.12744140625 7200 3100 2800 4.33146834372122E-12 3100 2800</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" name="normal">
+          <float_array id="lib-normal-array-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" count="12">0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f">
+          <input semantic="POSITION" source="#lib-position-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" />
+        </vertices>
+        <triangles count="2" material="material-bba94320-ce07-4b11-8a0c-2efa117054ef">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f" />
+          <p>1 1 2 2 3 3 1 1 3 3 0 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a527860a-f786-4da3-844c-6f2b6d77c575">
+      <mesh>
+        <source id="lib-position-a527860a-f786-4da3-844c-6f2b6d77c575" name="position">
+          <float_array id="lib-position-array-a527860a-f786-4da3-844c-6f2b6d77c575" count="12" digits="17" magnitude="308">7200 2900 -150 200 2900 -150 200 2900 0 7200 2900 0</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a527860a-f786-4da3-844c-6f2b6d77c575" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a527860a-f786-4da3-844c-6f2b6d77c575" name="normal">
+          <float_array id="lib-normal-array-a527860a-f786-4da3-844c-6f2b6d77c575" count="12">0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a527860a-f786-4da3-844c-6f2b6d77c575" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a527860a-f786-4da3-844c-6f2b6d77c575">
+          <input semantic="POSITION" source="#lib-position-a527860a-f786-4da3-844c-6f2b6d77c575" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a527860a-f786-4da3-844c-6f2b6d77c575" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a527860a-f786-4da3-844c-6f2b6d77c575" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef">
+      <mesh>
+        <source id="lib-position-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" name="position">
+          <float_array id="lib-position-array-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" count="12" digits="17" magnitude="308">200 2900 -150 200 -2100 -150 200 -2100 0 200 2900 0</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" name="normal">
+          <float_array id="lib-normal-array-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef">
+          <input semantic="POSITION" source="#lib-position-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-d3768f56-cd6d-412f-8060-4c30bf6b1233">
+      <mesh>
+        <source id="lib-position-d3768f56-cd6d-412f-8060-4c30bf6b1233" name="position">
+          <float_array id="lib-position-array-d3768f56-cd6d-412f-8060-4c30bf6b1233" count="12" digits="17" magnitude="308">200 -2100 -150 7200 -2100 -150 7200 -2100 0 200 -2100 0</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-d3768f56-cd6d-412f-8060-4c30bf6b1233" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-d3768f56-cd6d-412f-8060-4c30bf6b1233" name="normal">
+          <float_array id="lib-normal-array-d3768f56-cd6d-412f-8060-4c30bf6b1233" count="12">0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-d3768f56-cd6d-412f-8060-4c30bf6b1233" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-d3768f56-cd6d-412f-8060-4c30bf6b1233">
+          <input semantic="POSITION" source="#lib-position-d3768f56-cd6d-412f-8060-4c30bf6b1233" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-d3768f56-cd6d-412f-8060-4c30bf6b1233" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-d3768f56-cd6d-412f-8060-4c30bf6b1233" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf">
+      <mesh>
+        <source id="lib-position-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" name="position">
+          <float_array id="lib-position-array-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" count="12" digits="17" magnitude="308">7200 -2100 -150 7200 2900 -150 7200 2900 0 7200 -2100 0</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" name="normal">
+          <float_array id="lib-normal-array-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf">
+          <input semantic="POSITION" source="#lib-position-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ad43281e-433d-416d-a01a-8ceb908d991c">
+      <mesh>
+        <source id="lib-position-ad43281e-433d-416d-a01a-8ceb908d991c" name="position">
+          <float_array id="lib-position-array-ad43281e-433d-416d-a01a-8ceb908d991c" count="12" digits="17" magnitude="308">7200 2900 0 200 2900 0 200 -2100 0 7200 -2100 0</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-ad43281e-433d-416d-a01a-8ceb908d991c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ad43281e-433d-416d-a01a-8ceb908d991c" name="normal">
+          <float_array id="lib-normal-array-ad43281e-433d-416d-a01a-8ceb908d991c" count="12">0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-ad43281e-433d-416d-a01a-8ceb908d991c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ad43281e-433d-416d-a01a-8ceb908d991c">
+          <input semantic="POSITION" source="#lib-position-ad43281e-433d-416d-a01a-8ceb908d991c" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ad43281e-433d-416d-a01a-8ceb908d991c" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ad43281e-433d-416d-a01a-8ceb908d991c" />
+          <p>2 2 3 3 0 0 2 2 0 0 1 1</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92">
+      <mesh>
+        <source id="lib-position-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" name="position">
+          <float_array id="lib-position-array-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" count="12" digits="17" magnitude="308">7200 2900 -150 7200 -2100 -150 200 -2100 -150 200 2900 -150</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" name="normal">
+          <float_array id="lib-normal-array-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" count="12">0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92">
+          <input semantic="POSITION" source="#lib-position-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" />
+        </vertices>
+        <triangles count="2" material="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92" />
+          <p>3 3 0 0 1 1 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2">
+      <mesh>
+        <source id="lib-position-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" name="position">
+          <float_array id="lib-position-array-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" count="12" digits="17" magnitude="308">200 -2100 3500 200 2900 2826.92309570313 3.92539343044285E-12 2900 2826.92309570313 3.92539343044285E-12 -2100 3500</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" name="normal">
+          <float_array id="lib-normal-array-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" count="12">0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2">
+          <input semantic="POSITION" source="#lib-position-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd">
+      <mesh>
+        <source id="lib-position-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" name="position">
+          <float_array id="lib-position-array-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" count="12" digits="17" magnitude="308">200 2900 2826.92309570313 200 2900 -150 3.92539343044285E-12 2900 -150 3.92539343044285E-12 2900 2826.92309570313</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" name="normal">
+          <float_array id="lib-normal-array-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" count="12">0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd">
+          <input semantic="POSITION" source="#lib-position-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd" />
+          <p>1 1 2 2 3 3 1 1 3 3 0 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c">
+      <mesh>
+        <source id="lib-position-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" name="position">
+          <float_array id="lib-position-array-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" count="12" digits="17" magnitude="308">200 -2100 -150 200 -2100 3500 3.92539343044285E-12 -2100 3500 3.92539343044285E-12 -2100 -150</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" name="normal">
+          <float_array id="lib-normal-array-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" count="12">0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c">
+          <input semantic="POSITION" source="#lib-position-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-b5f8fb10-731e-4096-903a-35f0ad4ada92">
+      <mesh>
+        <source id="lib-position-b5f8fb10-731e-4096-903a-35f0ad4ada92" name="position">
+          <float_array id="lib-position-array-b5f8fb10-731e-4096-903a-35f0ad4ada92" count="12" digits="17" magnitude="308">200 2900 -150 200 -2100 -150 3.92539343044285E-12 -2100 -150 3.92539343044285E-12 2900 -150</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-b5f8fb10-731e-4096-903a-35f0ad4ada92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-b5f8fb10-731e-4096-903a-35f0ad4ada92" name="normal">
+          <float_array id="lib-normal-array-b5f8fb10-731e-4096-903a-35f0ad4ada92" count="12">0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-b5f8fb10-731e-4096-903a-35f0ad4ada92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-b5f8fb10-731e-4096-903a-35f0ad4ada92">
+          <input semantic="POSITION" source="#lib-position-b5f8fb10-731e-4096-903a-35f0ad4ada92" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-b5f8fb10-731e-4096-903a-35f0ad4ada92" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-b5f8fb10-731e-4096-903a-35f0ad4ada92" />
+          <p>3 3 0 0 1 1 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-aad50039-54bc-45f7-92d4-1da726875aa0">
+      <mesh>
+        <source id="lib-position-aad50039-54bc-45f7-92d4-1da726875aa0" name="position">
+          <float_array id="lib-position-array-aad50039-54bc-45f7-92d4-1da726875aa0" count="12" digits="17" magnitude="308">3.92539343044285E-12 -2100 -150 3.92539343044285E-12 -2100 3500 3.92539343044285E-12 2900 2826.92309570313 3.92539343044285E-12 2900 -150</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-aad50039-54bc-45f7-92d4-1da726875aa0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-aad50039-54bc-45f7-92d4-1da726875aa0" name="normal">
+          <float_array id="lib-normal-array-aad50039-54bc-45f7-92d4-1da726875aa0" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-aad50039-54bc-45f7-92d4-1da726875aa0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-aad50039-54bc-45f7-92d4-1da726875aa0">
+          <input semantic="POSITION" source="#lib-position-aad50039-54bc-45f7-92d4-1da726875aa0" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-aad50039-54bc-45f7-92d4-1da726875aa0" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-aad50039-54bc-45f7-92d4-1da726875aa0" />
+          <p>2 2 3 3 0 0 2 2 0 0 1 1</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a8354ab4-052f-4c0c-8fff-3ec861994ae6">
+      <mesh>
+        <source id="lib-position-a8354ab4-052f-4c0c-8fff-3ec861994ae6" name="position">
+          <float_array id="lib-position-array-a8354ab4-052f-4c0c-8fff-3ec861994ae6" count="12" digits="17" magnitude="308">200 -2100 -150 200 2900 -150 200 2900 2826.92309570313 200 -2100 3500</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a8354ab4-052f-4c0c-8fff-3ec861994ae6" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a8354ab4-052f-4c0c-8fff-3ec861994ae6" name="normal">
+          <float_array id="lib-normal-array-a8354ab4-052f-4c0c-8fff-3ec861994ae6" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a8354ab4-052f-4c0c-8fff-3ec861994ae6" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a8354ab4-052f-4c0c-8fff-3ec861994ae6">
+          <input semantic="POSITION" source="#lib-position-a8354ab4-052f-4c0c-8fff-3ec861994ae6" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a8354ab4-052f-4c0c-8fff-3ec861994ae6" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a8354ab4-052f-4c0c-8fff-3ec861994ae6" />
+          <p>2 2 3 3 0 0 2 2 0 0 1 1</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-d229744f-c5eb-45f0-827a-dc8d2d10828b">
+      <mesh>
+        <source id="lib-position-d229744f-c5eb-45f0-827a-dc8d2d10828b" name="position">
+          <float_array id="lib-position-array-d229744f-c5eb-45f0-827a-dc8d2d10828b" count="15" digits="17" magnitude="308">4.33146834372122E-12 2900 2826.92309570313 200 2900 2826.92309570313 7200 2900 2826.92309570313 7200 3100 2800 3.95117575810455E-12 3100 2800</float_array>
+          <technique_common>
+            <accessor count="5" offset="0" source="#lib-position-array-d229744f-c5eb-45f0-827a-dc8d2d10828b" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-d229744f-c5eb-45f0-827a-dc8d2d10828b" name="normal">
+          <float_array id="lib-normal-array-d229744f-c5eb-45f0-827a-dc8d2d10828b" count="15">0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061 0.000000 0.133412 0.991061</float_array>
+          <technique_common>
+            <accessor count="5" offset="0" source="#lib-normal-array-d229744f-c5eb-45f0-827a-dc8d2d10828b" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-d229744f-c5eb-45f0-827a-dc8d2d10828b">
+          <input semantic="POSITION" source="#lib-position-d229744f-c5eb-45f0-827a-dc8d2d10828b" />
+        </vertices>
+        <triangles count="3" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-d229744f-c5eb-45f0-827a-dc8d2d10828b" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-d229744f-c5eb-45f0-827a-dc8d2d10828b" />
+          <p>2 2 3 3 1 1 4 4 0 0 1 1 4 4 1 1 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a2231916-381f-4a17-8d52-ed0e903bacd9">
+      <mesh>
+        <source id="lib-position-a2231916-381f-4a17-8d52-ed0e903bacd9" name="position">
+          <float_array id="lib-position-array-a2231916-381f-4a17-8d52-ed0e903bacd9" count="12" digits="17" magnitude="308">3275 3100 250 2025 3100 250 2025 2900 250 3275 2900 250</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a2231916-381f-4a17-8d52-ed0e903bacd9" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a2231916-381f-4a17-8d52-ed0e903bacd9" name="normal">
+          <float_array id="lib-normal-array-a2231916-381f-4a17-8d52-ed0e903bacd9" count="12">0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a2231916-381f-4a17-8d52-ed0e903bacd9" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a2231916-381f-4a17-8d52-ed0e903bacd9">
+          <input semantic="POSITION" source="#lib-position-a2231916-381f-4a17-8d52-ed0e903bacd9" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a2231916-381f-4a17-8d52-ed0e903bacd9" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a2231916-381f-4a17-8d52-ed0e903bacd9" />
+          <p>3 3 0 0 1 1 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ac02b3d8-ab1e-483f-bda1-1837598b679d">
+      <mesh>
+        <source id="lib-position-ac02b3d8-ab1e-483f-bda1-1837598b679d" name="position">
+          <float_array id="lib-position-array-ac02b3d8-ab1e-483f-bda1-1837598b679d" count="12" digits="17" magnitude="308">2025 3100 250 2025 3100 2550 2025 2900 2550 2025 2900 250</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-ac02b3d8-ab1e-483f-bda1-1837598b679d" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ac02b3d8-ab1e-483f-bda1-1837598b679d" name="normal">
+          <float_array id="lib-normal-array-ac02b3d8-ab1e-483f-bda1-1837598b679d" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-ac02b3d8-ab1e-483f-bda1-1837598b679d" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ac02b3d8-ab1e-483f-bda1-1837598b679d">
+          <input semantic="POSITION" source="#lib-position-ac02b3d8-ab1e-483f-bda1-1837598b679d" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ac02b3d8-ab1e-483f-bda1-1837598b679d" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ac02b3d8-ab1e-483f-bda1-1837598b679d" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ba1b583e-c3c5-428e-a7f9-e8274d3b1313">
+      <mesh>
+        <source id="lib-position-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" name="position">
+          <float_array id="lib-position-array-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" count="12" digits="17" magnitude="308">2025 3100 2550 3275 3100 2550 3275 2900 2550 2025 2900 2550</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" name="normal">
+          <float_array id="lib-normal-array-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" count="12">0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ba1b583e-c3c5-428e-a7f9-e8274d3b1313">
+          <input semantic="POSITION" source="#lib-position-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ba1b583e-c3c5-428e-a7f9-e8274d3b1313" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a3167906-1323-480d-8ed9-990b6a0fd620">
+      <mesh>
+        <source id="lib-position-a3167906-1323-480d-8ed9-990b6a0fd620" name="position">
+          <float_array id="lib-position-array-a3167906-1323-480d-8ed9-990b6a0fd620" count="12" digits="17" magnitude="308">3275 3100 2550 3275 3100 250 3275 2900 250 3275 2900 2550</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-a3167906-1323-480d-8ed9-990b6a0fd620" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a3167906-1323-480d-8ed9-990b6a0fd620" name="normal">
+          <float_array id="lib-normal-array-a3167906-1323-480d-8ed9-990b6a0fd620" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-a3167906-1323-480d-8ed9-990b6a0fd620" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a3167906-1323-480d-8ed9-990b6a0fd620">
+          <input semantic="POSITION" source="#lib-position-a3167906-1323-480d-8ed9-990b6a0fd620" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a3167906-1323-480d-8ed9-990b6a0fd620" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a3167906-1323-480d-8ed9-990b6a0fd620" />
+          <p>0 0 1 1 2 2 0 0 2 2 3 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-f6dd6045-6b35-4229-9f14-9427985fcf69">
+      <mesh>
+        <source id="lib-position-f6dd6045-6b35-4229-9f14-9427985fcf69" name="position">
+          <float_array id="lib-position-array-f6dd6045-6b35-4229-9f14-9427985fcf69" count="12" digits="17" magnitude="308">3.92539343044285E-12 2900 -150 3.92539343044285E-12 2900 2826.92309570313 3.92539343044285E-12 3100 2800 3.92539343044285E-12 3100 -150</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-f6dd6045-6b35-4229-9f14-9427985fcf69" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-f6dd6045-6b35-4229-9f14-9427985fcf69" name="normal">
+          <float_array id="lib-normal-array-f6dd6045-6b35-4229-9f14-9427985fcf69" count="12">-1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-f6dd6045-6b35-4229-9f14-9427985fcf69" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-f6dd6045-6b35-4229-9f14-9427985fcf69">
+          <input semantic="POSITION" source="#lib-position-f6dd6045-6b35-4229-9f14-9427985fcf69" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-f6dd6045-6b35-4229-9f14-9427985fcf69" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-f6dd6045-6b35-4229-9f14-9427985fcf69" />
+          <p>2 2 3 3 0 0 2 2 0 0 1 1</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-b548602c-a56c-4502-a92e-e548387abef7">
+      <mesh>
+        <source id="lib-position-b548602c-a56c-4502-a92e-e548387abef7" name="position">
+          <float_array id="lib-position-array-b548602c-a56c-4502-a92e-e548387abef7" count="12" digits="17" magnitude="308">7200 2900 2826.92309570313 7200 2900 -150 7200 3100 -150 7200 3100 2800</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-position-array-b548602c-a56c-4502-a92e-e548387abef7" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-b548602c-a56c-4502-a92e-e548387abef7" name="normal">
+          <float_array id="lib-normal-array-b548602c-a56c-4502-a92e-e548387abef7" count="12">1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" offset="0" source="#lib-normal-array-b548602c-a56c-4502-a92e-e548387abef7" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-b548602c-a56c-4502-a92e-e548387abef7">
+          <input semantic="POSITION" source="#lib-position-b548602c-a56c-4502-a92e-e548387abef7" />
+        </vertices>
+        <triangles count="2" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-b548602c-a56c-4502-a92e-e548387abef7" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-b548602c-a56c-4502-a92e-e548387abef7" />
+          <p>3 3 0 0 1 1 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a131f13f-99a1-48a5-9ed5-02617c2bcee0">
+      <mesh>
+        <source id="lib-position-a131f13f-99a1-48a5-9ed5-02617c2bcee0" name="position">
+          <float_array id="lib-position-array-a131f13f-99a1-48a5-9ed5-02617c2bcee0" count="15" digits="17" magnitude="308">7200 2900 -150 200 2900 -150 3.92539343044285E-12 2900 -150 4.33146834372122E-12 3100 -150 7200 3100 -150</float_array>
+          <technique_common>
+            <accessor count="5" offset="0" source="#lib-position-array-a131f13f-99a1-48a5-9ed5-02617c2bcee0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a131f13f-99a1-48a5-9ed5-02617c2bcee0" name="normal">
+          <float_array id="lib-normal-array-a131f13f-99a1-48a5-9ed5-02617c2bcee0" count="15">0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000</float_array>
+          <technique_common>
+            <accessor count="5" offset="0" source="#lib-normal-array-a131f13f-99a1-48a5-9ed5-02617c2bcee0" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a131f13f-99a1-48a5-9ed5-02617c2bcee0">
+          <input semantic="POSITION" source="#lib-position-a131f13f-99a1-48a5-9ed5-02617c2bcee0" />
+        </vertices>
+        <triangles count="3" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a131f13f-99a1-48a5-9ed5-02617c2bcee0" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a131f13f-99a1-48a5-9ed5-02617c2bcee0" />
+          <p>3 3 4 4 1 1 1 1 4 4 0 0 3 3 1 1 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-ac3952d9-4bd8-4059-b72f-6659131c9e8c">
+      <mesh>
+        <source id="lib-position-ac3952d9-4bd8-4059-b72f-6659131c9e8c" name="position">
+          <float_array id="lib-position-array-ac3952d9-4bd8-4059-b72f-6659131c9e8c" count="24" digits="17" magnitude="308">4.33146834372122E-12 3100 -150 3.9592331149696E-12 3100 2800 7200 3100 2800 7200 3100 -150 3275 3100 250 3275 3100 2550 2025 3100 2550 2025 3100 250</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-position-array-ac3952d9-4bd8-4059-b72f-6659131c9e8c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-ac3952d9-4bd8-4059-b72f-6659131c9e8c" name="normal">
+          <float_array id="lib-normal-array-ac3952d9-4bd8-4059-b72f-6659131c9e8c" count="24">0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="8" offset="0" source="#lib-normal-array-ac3952d9-4bd8-4059-b72f-6659131c9e8c" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-ac3952d9-4bd8-4059-b72f-6659131c9e8c">
+          <input semantic="POSITION" source="#lib-position-ac3952d9-4bd8-4059-b72f-6659131c9e8c" />
+        </vertices>
+        <triangles count="8" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-ac3952d9-4bd8-4059-b72f-6659131c9e8c" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-ac3952d9-4bd8-4059-b72f-6659131c9e8c" />
+          <p>2 2 3 3 4 4 4 4 3 3 0 0 1 1 2 2 5 5 7 7 0 0 1 1 2 2 4 4 5 5 4 4 0 0 7 7 1 1 5 5 6 6 7 7 1 1 6 6</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="mesh-a2d071a9-ed2b-49c5-b44f-50419ac3db92">
+      <mesh>
+        <source id="lib-position-a2d071a9-ed2b-49c5-b44f-50419ac3db92" name="position">
+          <float_array id="lib-position-array-a2d071a9-ed2b-49c5-b44f-50419ac3db92" count="30" digits="17" magnitude="308">3.92539343044285E-12 2900 -150 200 2900 -150 7200 2900 -150 7200 2900 2826.92309570313 200 2900 2826.92309570313 4.33146834372122E-12 2900 2826.92309570313 3275 2900 250 2025 2900 250 2025 2900 2550 3275 2900 2550</float_array>
+          <technique_common>
+            <accessor count="10" offset="0" source="#lib-position-array-a2d071a9-ed2b-49c5-b44f-50419ac3db92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="lib-normal-a2d071a9-ed2b-49c5-b44f-50419ac3db92" name="normal">
+          <float_array id="lib-normal-array-a2d071a9-ed2b-49c5-b44f-50419ac3db92" count="30">0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 -1.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="10" offset="0" source="#lib-normal-array-a2d071a9-ed2b-49c5-b44f-50419ac3db92" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="lib-vertices-a2d071a9-ed2b-49c5-b44f-50419ac3db92">
+          <input semantic="POSITION" source="#lib-position-a2d071a9-ed2b-49c5-b44f-50419ac3db92" />
+        </vertices>
+        <triangles count="10" material="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c">
+          <input offset="0" semantic="VERTEX" source="#lib-vertices-a2d071a9-ed2b-49c5-b44f-50419ac3db92" />
+          <input offset="1" semantic="NORMAL" source="#lib-normal-a2d071a9-ed2b-49c5-b44f-50419ac3db92" />
+          <p>0 0 1 1 4 4 7 7 8 8 4 4 4 4 8 8 9 9 6 6 7 7 1 1 3 3 9 9 6 6 0 0 4 4 5 5 7 7 4 4 1 1 4 4 9 9 3 3 6 6 1 1 2 2 3 3 6 6 2 2</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="Rhino">
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode">
+      <node id="View-Perspective" name="View-Perspective">
+        <matrix>0.809024 -0.039980 0.586414 15184.873579 0.587775 0.055029 -0.807151 -17815.004158 0.000000 0.997684 0.068018 2535.052330 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_camera url="#Camera-Perspective" />
+      </node>
+      <node id="View-Top" name="View-Top">
+        <matrix>1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 3814.970411 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_camera url="#Camera-Top" />
+      </node>
+      <node id="View-Front" name="View-Front">
+        <matrix>1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 -1.000000 -2360.048433 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_camera url="#Camera-Front" />
+      </node>
+      <node id="View-Right" name="View-Right">
+        <matrix>0.000000 0.000000 1.000000 7560.065137 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix>
+        <instance_camera url="#Camera-Right" />
+      </node>
+      <node id="ab0d8169-7c36-4eab-8233-09125843ea50" name="Mesh">
+        <instance_geometry url="#mesh-aac1deb5-abce-4d13-b0e2-066e65ec6898">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a719b3d2-9925-4a5e-9341-470b807caf31" name="Mesh">
+        <instance_geometry url="#mesh-a67ee7b0-f462-455f-9559-7842d35a9f0d">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="e9881904-7875-41d9-ad08-3049c673199a" name="Mesh">
+        <instance_geometry url="#mesh-abf5e270-0dfc-4ef7-b648-40a724f49ea0">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="aff0599d-63d7-4843-8a87-a822162bfdc4" name="Mesh">
+        <instance_geometry url="#mesh-c5704f4f-592a-4c1a-a0d5-0234826c1d97">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="ad74ef21-1a9c-4d41-b1c3-18861350b647" name="Mesh">
+        <instance_geometry url="#mesh-a2240062-3184-46a6-9055-db27ebbe5ed1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a0d813cc-d179-4b91-b4c5-9baf253b25a0" name="Mesh">
+        <instance_geometry url="#mesh-ab48a763-c436-4729-b9b7-fdfb3329af70">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="c81c422c-853a-4df7-9589-a9d768fa9d61" name="Mesh">
+        <instance_geometry url="#mesh-a5d32769-7643-4dc1-b5b3-c1f2f8c7908c">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a0d510f6-70a5-439d-a5f2-62300fb40d95" name="Mesh">
+        <instance_geometry url="#mesh-a5375508-6c33-499c-945e-1ddd23c182c1">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="aaa5508b-e3f7-4d2c-80d1-98ef64ba6550" name="Mesh">
+        <instance_geometry url="#mesh-bc19a367-25b6-448b-82e6-7f171a192e27">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="c30c9b24-e604-47a9-9b5f-0d7ec48da430" name="Mesh">
+        <instance_geometry url="#mesh-af45bfb6-1e9d-4c88-9092-a9a7a33b0a5f">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-bba94320-ce07-4b11-8a0c-2efa117054ef" target="#bba94320-ce07-4b11-8a0c-2efa117054ef" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="bb16450e-b2b0-4139-abdd-0269036b4081" name="Mesh">
+        <instance_geometry url="#mesh-a527860a-f786-4da3-844c-6f2b6d77c575">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="b4fa1395-90c4-47be-9668-653d08cd3cc8" name="Mesh">
+        <instance_geometry url="#mesh-ab20663c-1cb2-4f04-b4e5-fa1e9c9a6aef">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a214528e-28db-4d4e-894f-f01f0a5513ec" name="Mesh">
+        <instance_geometry url="#mesh-d3768f56-cd6d-412f-8060-4c30bf6b1233">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="aa7ea088-a526-4889-8bf9-4e5d4d1912be" name="Mesh">
+        <instance_geometry url="#mesh-cc8c4f8c-5dc4-4d86-86be-dd1a90d73faf">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="ac35fc97-e05b-4e4e-a1da-ff89e66930c7" name="Mesh">
+        <instance_geometry url="#mesh-ad43281e-433d-416d-a01a-8ceb908d991c">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="aea56acf-82ac-4cea-9866-31bade05bb69" name="Mesh">
+        <instance_geometry url="#mesh-cb18651e-a5a6-4679-b7a8-5f75ff2b6c92">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-a4d02fe4-dab9-4095-9cb4-8394db6c1496" target="#a4d02fe4-dab9-4095-9cb4-8394db6c1496" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a5bf5650-ba0a-4732-bd49-0b84dccc61a4" name="Mesh">
+        <instance_geometry url="#mesh-a0f6e215-c9a1-40a1-b6c7-0b9c0f10b2d2">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="f16b4329-1541-41b4-9dd0-77de2f42f868" name="Mesh">
+        <instance_geometry url="#mesh-af929b08-ef0d-4d4a-bd20-bff59ce0d7dd">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a9a6e61f-5792-43bd-a9d0-a23726f2cf30" name="Mesh">
+        <instance_geometry url="#mesh-a04bfc8b-1b63-49c0-98ef-d4f8c6ceac3c">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="aa9fb70f-7d39-4efa-897c-1d88f51b1031" name="Mesh">
+        <instance_geometry url="#mesh-b5f8fb10-731e-4096-903a-35f0ad4ada92">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a9c2b02a-080b-4d38-a288-f07f3101232b" name="Mesh">
+        <instance_geometry url="#mesh-aad50039-54bc-45f7-92d4-1da726875aa0">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="d3f83db3-73de-40b5-a665-f50d3f1de84e" name="Mesh">
+        <instance_geometry url="#mesh-a8354ab4-052f-4c0c-8fff-3ec861994ae6">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="bf483560-1506-4709-8838-01df0ac53895" name="Mesh">
+        <instance_geometry url="#mesh-d229744f-c5eb-45f0-827a-dc8d2d10828b">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a6fad37e-0a7c-47c4-b254-d513bf7078a1" name="Mesh">
+        <instance_geometry url="#mesh-a2231916-381f-4a17-8d52-ed0e903bacd9">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a41db9f2-c8c8-42c1-ab6c-9a2e37c5f8d8" name="Mesh">
+        <instance_geometry url="#mesh-ac02b3d8-ab1e-483f-bda1-1837598b679d">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="c3dedac9-04ac-478a-a752-d8739b4496c0" name="Mesh">
+        <instance_geometry url="#mesh-ba1b583e-c3c5-428e-a7f9-e8274d3b1313">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="c4d215e1-633f-4430-ab34-75e0e827f50d" name="Mesh">
+        <instance_geometry url="#mesh-a3167906-1323-480d-8ed9-990b6a0fd620">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="dc78e312-a128-463e-95a6-692b925a44ea" name="Mesh">
+        <instance_geometry url="#mesh-f6dd6045-6b35-4229-9f14-9427985fcf69">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="b92e5931-583b-4347-8990-2c91b5b7f59b" name="Mesh">
+        <instance_geometry url="#mesh-b548602c-a56c-4502-a92e-e548387abef7">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="afa22cfb-7dac-4a71-873a-cdf9ea65a88e" name="Mesh">
+        <instance_geometry url="#mesh-a131f13f-99a1-48a5-9ed5-02617c2bcee0">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a0966679-a190-40d5-a9c4-267310486fc8" name="Mesh">
+        <instance_geometry url="#mesh-ac3952d9-4bd8-4059-b72f-6659131c9e8c">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="a9302630-ca83-46c5-bb92-10fa8c9c5b51" name="Mesh">
+        <instance_geometry url="#mesh-a2d071a9-ed2b-49c5-b44f-50419ac3db92">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="material-e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" target="#e6da1d5d-1a8c-4c25-a8e0-2e55018ee61c" />
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode" />
+  </scene>
+</COLLADA>

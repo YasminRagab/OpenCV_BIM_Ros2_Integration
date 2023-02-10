@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="https://wiki.ros.org/xacro" name="robot">
+
+
+    <xacro:property name="h_motor_height"   value="0.25" />
+    <xacro:property name="arm_height"       value="0.1" />
+    <xacro:property name="extension_height" value="0.05" />
+    <xacro:property name="v_motor_height"   value="0" />
+    <xacro:property name="v_motor_x"        value="1.5" />
+    <xacro:property name="head_height"      value="0" />
+    <xacro:property name="head_x"           value="0.0375" />
+    <xacro:property name="path"             value="ros2_aruco/urdf_model/Meshes"/>
+
+    <link name="Base">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/Base.dae"/>
+            </geometry>
+            <origin xyz="0 0 0"/>
+        </visual>
+    </link>
+
+    <link name="H_Motor">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/H_Motor.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+    <link name="Arm">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/Arm.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+    <link name="Translation">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/Translation.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+    <link name="V_Motor">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/V_Motor.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+
+    <link name="R_Motor">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/R_Motor.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+    <link name="Head">
+        <visual>
+            <geometry>
+                <mesh filename="package://${path}/Head.dae"/>
+            </geometry>
+        </visual>
+        <origin xyz="0 0 0"/>
+    </link>
+
+    <joint name="rotation" type="continuous">
+        <parent link="Base"/>
+        <child  link="H_Motor"/>
+        <axis   xyz="0 0 1"/>
+        <origin xyz="0 0 ${h_motor_height}"/>
+    </joint>
+
+    
+    <joint name="tilt" type="revolute">
+        <parent link="H_Motor"/>
+        <child  link="Arm"/>
+        <axis   xyz="0 1 0"/>
+        <origin xyz="0 0 ${arm_height}"/>
+        <limit effort='100' velocity='1' lower='-1.0472' upper='0' />
+    </joint>
+
+
+    <joint name="extension" type="prismatic">
+        <parent link="Arm"/>
+        <child link="Translation"/>
+        <axis   xyz="1 0 0"/>
+        <origin xyz="0 0 ${extension_height}"/>
+        <limit effort='100' velocity='1' lower='0' upper='1.1'/>
+    </joint>
+
+    <joint name="h_yaw" type="continuous">
+        <parent link="Translation"/>
+        <child  link="V_Motor"/>
+        <axis   xyz="1 0 0"/>
+        <origin xyz="${v_motor_x} 0 ${v_motor_height}"/>
+    </joint>
+
+
+    <joint name="h_pitch" type="revolute">
+        <parent link="V_Motor"/>
+        <child  link="R_Motor"/>
+        <axis   xyz="0 0 1"/>
+        <origin xyz="0 0 0"/>
+        <limit effort='100' velocity='1' lower='-1.0472' upper='1.0472'/>
+    </joint>
+
+    <joint name="h_roll" type="revolute">
+        <parent link="R_Motor"/>
+        <child  link="Head"/>
+        <axis   xyz="0 1 0"/>
+        <origin xyz="${head_x} 0 ${head_height}"/>
+        <limit effort='100' velocity='1' lower='-1.0472' upper='1.0472'/>
+    </joint>
+
+ 
+
+</robot>
