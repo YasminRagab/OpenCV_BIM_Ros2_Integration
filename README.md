@@ -50,7 +50,7 @@ $ ros2 launch ros2_aruco myrobot_launch.py
 ```
 ### ` Option 02 `
 
-* In the desktop_icon folder, change the path in each file 
+* In the desktop_icon folder, change the path in each file:
 
     * (Exec=/home/`user`/ptp_ws/src/ros2_aruco/launch_script/pkg_launch.sh)
     * (Icon=/home/`user`/ptp_ws/src/ros2_aruco/launch_script/robot.png)
