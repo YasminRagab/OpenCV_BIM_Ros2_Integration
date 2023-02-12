@@ -6,7 +6,8 @@ ROS2 package uses OpenCV aruco marker pose detection and BIM integration for gla
 
 ## **Getting Started**
 
-Make sure you have [ROS2](https://docs.ros.org/en/humble/Installation.html) Installed on your machine. Create a workspace
+* Make sure you have [ROS2](https://docs.ros.org/en/humble/Installation.html) Installed on your machine.
+* Create a workspace
 
 ```
 $ mkdir -p ptp_ws/src/
