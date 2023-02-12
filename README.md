@@ -34,7 +34,7 @@ $ colcon build
 $ . install/setup.bash
 ```
 ## **Running the Code**
-### ` **Option** 1 ` 
+### ` Option 01 ` 
 
 * Launch the camera
 
@@ -47,7 +47,7 @@ $ ros2 launch usb_cam demo_launch.py
 ``` 
 $ ros2 launch ros2_aruco myrobot_launch.py
 ```
-### ` **Option** 2 `
+### ` Option 02 `
 
 * In the desktop_icon folder, change the path in each file 
 
