@@ -1,10 +1,10 @@
-# Glass Crane Operation Assistance
+# **Glass Crane Operation Assistance**
 
-## Description
+## **Description**
 
 ROS2 package uses OpenCV aruco marker pose detection and BIM integration for glass crane operation assistance
 
-## Getting Started
+## **Getting Started**
 
 Make sure you have [ROS2](https://docs.ros.org/en/humble/Installation.html) Installed on your machine. Create a workspace
 
@@ -33,8 +33,8 @@ $ colcon build
 ```
 $ . install/setup.bash
 ```
-## Running the Code
-` Option 1 ` 
+## **Running the Code**
+### ` **Option** 1 ` 
 
 * Launch the camera
 
@@ -47,7 +47,7 @@ $ ros2 launch usb_cam demo_launch.py
 ``` 
 $ ros2 launch ros2_aruco myrobot_launch.py
 ```
-` Option 2 `
+### ` **Option** 2 `
 
 * In the desktop_icon folder, change the path in each file 
 
