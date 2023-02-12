@@ -59,7 +59,7 @@ class GlassPanel(Node):
         self.panel.mesh_resource = "package://ros2_aruco/urdf_model/Meshes/panel.dae"
         self.array.markers.append(self.panel)
 
-        ###
+        ### 3dview marker
         self.view = Marker()
         self.view.header.frame_id = 'world'
         self.view.ns = ''
@@ -89,7 +89,7 @@ class GlassPanel(Node):
         self.view.mesh_resource = "package://ros2_aruco/urdf_model/Meshes/3d_mesh.dae"
         self.array.markers.append(self.view)
 
-        ###
+        ### Text marker
 
         self.text = Marker()
         self.text.header.frame_id = 'world'
@@ -116,7 +116,7 @@ class GlassPanel(Node):
         self.text.color.g = 1.0
         self.text.color.b = 1.0
 
-        self.text.text = f"The target oreintation is rotation around x-axis by {round(self.e_x,4)} degrees"
+        self.text.text = f"The target oreintation is\nrotation around x-axis by\n{round(self.euler_x,4)} degrees"
 
         self.array.markers.append(self.text)
 
@@ -177,9 +177,9 @@ class GlassPanel(Node):
 
         # converting euler from radians to degrees for easier understanding and adjusting yaw from revit to match rviz orientation:  
 
-        self.e_x = math.degrees(roll_x) 
-        self.e_y = math.degrees(pitch_y) 
-        self.e_z = math.degrees(yaw_z) 
+        self.euler_x = math.degrees(roll_x) 
+        self.euler_y = math.degrees(pitch_y) 
+        self.euler_z = math.degrees(yaw_z) 
 
     def timer_callback(self):
 
