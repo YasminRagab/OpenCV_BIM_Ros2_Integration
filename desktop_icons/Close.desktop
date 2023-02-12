@@ -1,0 +1,17 @@
+[Desktop Entry]
+Version=1.0
+Name=Close
+Name[de]=Close
+Comment=Icon fuer MyProg
+Comment[de]=Icon fuer MyProg
+GenericName=Application
+GenericName[de]=Anwendung
+Exec=/home/user/ptp_ws/src/ros2_aruco/launch_script/destroy.sh
+Terminal=false
+Type=Application
+Icon=/home/user/ptp_ws/src/ros2_aruco/launch_script/close.png
+Categories=Graphics;Science;Engineering
+StartupNotify=true 
+GenericName[de_DE]=Feature-basierter parametrischer Modellierer
+Comment[de_DE]=Feature-basierter parametrischer Modellierer
+MimeType=application/x-extension-fcstd

@@ -1,0 +1,258 @@
+{
+  "Uuid": "0787d0b6-dccc-4836-ad3e-29108bd0cd7d",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "TransformData",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "bba35ea7-62d1-4f36-8531-882345e32b11-00055ebf"
+      ],
+      "Id": "f8c10891fdf34d4caa45c01db707ea59",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "527214cfbaeb4946a6a04cef68b0c508",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "d186d2045bd7445389fb1c6290c189ca",
+      "Inputs": [
+        {
+          "Id": "1bfbb9ee9b594a66bb20ede607424cad",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ceeb62816c3547089fbb18f2d2eaf864",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "import clr\r\nclr.AddReference(\"RevitNodes\")\r\nimport Revit\r\nclr.ImportExtensions(Revit.Elements)\r\nclr.AddReference(\"RevitAPI\")\r\nimport Autodesk\r\nfrom Autodesk.Revit.DB import *\r\nclr.AddReference('DSCoreNodes')\r\nclr.AddReference('ProtoGeometry')\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nfrom DSCore import *\r\nclr.AddReference(\"RevitServices\")\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuiapp = DocumentManager.Instance.CurrentUIApplication\r\napp = uiapp.Application\r\n\r\ndef GetAxes(transform):\r\n\taxes = []\r\n\taxes.append(transform.Origin.ToPoint())\r\n\taxes.append(transform.BasisX.ToVector())\r\n\taxes.append(transform.BasisY.ToVector())\r\n\taxes.append(transform.BasisZ.ToVector())\r\n\treturn axes\r\n\r\nwall = UnwrapElement(IN[0])\r\noutput = []\r\n\r\n#Get wall bounding box\r\nwallBoundBox = wall.get_BoundingBox(doc.ActiveView)\r\n\r\n#Original\r\ntransform = wall.GetTransform()\r\noriginalTransform = wallBoundBox.Transform\r\noriginalAxes = GetAxes(originalTransform)\r\ntranslation = transform.Origin\r\n\r\nOUT = transform.BasisX, transform.BasisY, transform.BasisZ , translation",
+      "Engine": "IronPython2",
+      "VariableInputPorts": true,
+      "Id": "5ab9f54584774ca399e266e896bd4120",
+      "Inputs": [
+        {
+          "Id": "3d8969b6f6634cfabaf1aafd6ebe6464",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cfadd8f355ff4720894ed078b8861313",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\panel1.txt",
+      "InputValue": "C:\\Users\\DELL\\OneDrive\\Desktop\\panel1.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "d7b5783c829a494aaa0021fea56ce2f7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4a890c7511004be1ba85ec1bed68192d",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportCSV@string,var[][]",
+      "Id": "cc8a8e9313ef41b59d2eae042b22c5b6",
+      "Inputs": [
+        {
+          "Id": "93cf13771ed74e1bad03fb419db34e1a",
+          "Name": "filePath",
+          "Description": "Path to write to\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6e6dde2c4ae34573b34343b52805b800",
+          "Name": "data",
+          "Description": "List of lists to write into CSV\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c51507863d6f4dbdaf088dd19a3b337d",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Write a list of lists into a file using a comma-separated values format. Outer list represents rows, inner lists represent columns.\n\nData.ExportCSV (filePath: string, data: var[][]): void"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "527214cfbaeb4946a6a04cef68b0c508",
+      "End": "3d8969b6f6634cfabaf1aafd6ebe6464",
+      "Id": "dcdd7bb070a8435c8da6e71b400cc6ca"
+    },
+    {
+      "Start": "cfadd8f355ff4720894ed078b8861313",
+      "End": "1bfbb9ee9b594a66bb20ede607424cad",
+      "Id": "5e9a7c8337a54b369c25aeb5b0c6a42a"
+    },
+    {
+      "Start": "cfadd8f355ff4720894ed078b8861313",
+      "End": "6e6dde2c4ae34573b34343b52805b800",
+      "Id": "ac9f7ecbbdb54d188823b3d9454e0ad0"
+    },
+    {
+      "Start": "4a890c7511004be1ba85ec1bed68192d",
+      "End": "93cf13771ed74e1bad03fb419db34e1a",
+      "Id": "6b65c5be3dc746aa9d42295b6df8ea03"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 6807.08544921875,
+      "EyeY": 5236.07373046875,
+      "EyeZ": -12167.691528320313,
+      "LookX": -12197.88671875,
+      "LookY": -1314.0751953125,
+      "LookZ": 7834.107421875,
+      "UpX": 0.10545671731233597,
+      "UpY": 0.99211472272872925,
+      "UpZ": -0.067729547619819641
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "f8c10891fdf34d4caa45c01db707ea59",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 614.09291844226243,
+        "Y": 919.27211189338448
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "d186d2045bd7445389fb1c6290c189ca",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1258.900819520951,
+        "Y": 919.39737528371973
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Python Script",
+        "Id": "5ab9f54584774ca399e266e896bd4120",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 947.47528639585551,
+        "Y": 917.930333489554
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "d7b5783c829a494aaa0021fea56ce2f7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 929.4094131103692,
+        "Y": 759.90880583544993
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ExportCSV",
+        "Id": "cc8a8e9313ef41b59d2eae042b22c5b6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1259.0161644375389,
+        "Y": 760.6706711110902
+      }
+    ],
+    "Annotations": [],
+    "X": -440.60754351048149,
+    "Y": -467.45706202317228,
+    "Zoom": 0.91053393324527165
+  }
+}
