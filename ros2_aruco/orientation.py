@@ -35,7 +35,6 @@ class Orientation(Node):
 
         self.degrees_from_qt()
 
-
     def rot_from_txt(self):
 
         # Retrieving panel orientation (target state) from BIM:
