@@ -1,30 +1,35 @@
-#!/usr/bin/env python3
-from visualization_msgs.msg  import Marker, MarkerArray
 import rclpy
-from rclpy.node import Node
-import codecs
-import numpy as np
-from numpy import mat,block
-import tf_transformations as tf_trans
-from ament_index_python import get_package_share_directory
-from tf_transformations import euler_from_quaternion
 import math
+import codecs
 
+import numpy as np
+import tf_transformations as tf_trans
 
+from numpy                   import mat,block
+from rclpy.node              import Node
+from visualization_msgs.msg  import Marker, MarkerArray
+from ament_index_python      import get_package_share_directory
+from tf_transformations      import euler_from_quaternion
+from tf2_geometry_msgs       import PoseStamped
+from tf2_ros                 import TransformStamped
 
 class GlassPanel(Node):
     def __init__(self,name):
         super().__init__(name)
 
-        self.degrees_from_qt()
+        self.pose_stamped = PoseStamped()
+
+        # Defining attributes for robot end effector (head manipulator) orientation (current state):
+        self.head_roll  = 0.0
+        self.head_pitch = 0.0
+        self.head_yaw   = 0.0
 
         # creating a publisher for panel marker for rviz visualization:
-
-        self.pub_rviz = self.create_publisher(MarkerArray, 'markers', 10)
-        self.timer = self.create_timer(2.0, self.timer_callback)
+        self.pub_rviz  = self.create_publisher(MarkerArray, 'markers', 10)
+        self.trans_sub = self.create_subscription(TransformStamped, 'head_transformation', self.trans_callback, 10)
+        self.timer     = self.create_timer(2.0, self.timer_callback)
 
         # we are using a marker array visualization message:
-
         self.array  = MarkerArray()
 
         # setting up the marker message attributes:
@@ -55,7 +60,6 @@ class GlassPanel(Node):
         self.panel.color.b = 1.0
 
         # setting the path for the panel marker mesh: 
-
         self.panel.mesh_resource = "package://ros2_aruco/urdf_model/Meshes/panel.dae"
         self.array.markers.append(self.panel)
 
@@ -90,7 +94,6 @@ class GlassPanel(Node):
         self.array.markers.append(self.view)
 
         ### Text marker
-
         self.text = Marker()
         self.text.header.frame_id = 'world'
         self.text.ns = ''
@@ -98,88 +101,62 @@ class GlassPanel(Node):
         self.text.id = 2          
         self.text.type = Marker().TEXT_VIEW_FACING
 
-        self.text.pose.position.x = 0.0
-        self.text.pose.position.y = 0.0
-        self.text.pose.position.z = 2.5 
+        self.text.pose.position.x = 0.75
+        self.text.pose.position.y = 1.50
+        self.text.pose.position.z = 2.90
 
         self.text.pose.orientation.x = 0.0
         self.text.pose.orientation.y = 0.0
         self.text.pose.orientation.z = 0.0
         self.text.pose.orientation.w = 1.0
 
-        self.text.scale.x = 0.01
-        self.text.scale.y = 0.01
-        self.text.scale.z = 0.1
+        self.text.scale.x = 1.0
+        self.text.scale.y = 1.0
+        self.text.scale.z = 0.2
 
         self.text.color.a = 1.0
         self.text.color.r = 1.0
         self.text.color.g = 1.0
         self.text.color.b = 1.0
 
-        self.text.text = f"The target oreintation is\nrotation around x-axis by\n{round(self.euler_x,4)} degrees"
-
+        self.text.text = f"Target"
         self.array.markers.append(self.text)
 
-    def rot_from_txt(self):
+        # Create a marker message to display the text
+        self.marker = Marker()
+        self.marker.header.frame_id = 'world'
+        self.marker.ns = ''
+        self.marker.header.stamp = self.get_clock().now().to_msg()
+        self.marker.id = 3
+        self.marker.type = Marker().TEXT_VIEW_FACING
+        
+        self.marker.pose = self.pose_stamped.pose
 
-        # reading text from BIM file: 
+        self.text.scale.x   = 1.0
+        self.text.scale.y   = 1.0
+        self.marker.scale.z = 0.2
 
-        path = get_package_share_directory('ros2_aruco') + '/ros2_aruco/panel1.txt'
-        bim  = codecs.open(path, 'r', 'UTF-8')
-        txt  = bim.read()
+        self.marker.color.a = 1.0
+        self.marker.color.r = 1.0
+        self.marker.color.g = 1.0
+        self.marker.color.b = 1.0
 
-        # removing brackets at the start and end of text: 
+        self.marker.text = f"{self.head_roll}"
+        self.array.markers.append(self.marker)
 
-        txt_1 = txt[1:]
-        txt_2 = txt_1[:-3]
+    def trans_callback(self, msg):
 
-        # splitting lines of text (rotation vectors) and assigning them to attributes: 
+        # Retrieving head rotation (current state) from TransformStamped message and converting it from quaternion to euler radians:
+        head_trans = msg
+        trans_quat = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , head_trans.transform.rotation.w]
+        (t_roll_x, t_pitch_y, t_yaw_z) = euler_from_quaternion(trans_quat)
 
-        vec_list = txt_2.split(')\r\n(')
-        row1 = vec_list[0].split(',')
-        row2 = vec_list[1].split(',')
-        row3 = vec_list[2].split(',')
-        rvec_x = [float(num) for num in row1]
-        rvec_y = [float(num) for num in row2]
-        rvec_z = [float(num) for num in row3]
+        # Converting euler radians to degrees for easier understanding:
+        self.head_roll  = math.degrees(t_roll_x)
+        self.head_pitch = math.degrees(t_pitch_y)
+        self.head_yaw   = math.degrees(t_yaw_z)
 
-        # forming rotation matrix from rotation vectors attributes:
-
-        self.r_matrix = block([rvec_x,
-                               rvec_y,
-                               rvec_z])
-
-    def qt_from_rmat(self):
-
-        self.rot_from_txt()
-
-        # transforming the rotation matrix from 3x3 to 4x4 as tf_trans.quaternion_from matrix expects a 4x4 matrix:    
-
-        rot_matrix = np.eye(4)
-        rot_matrix[0:3, 0:3] = self.r_matrix
-
-        # retrieving quaternion from rotation matrix and assigning to attributes:
-
-        quat = tf_trans.quaternion_from_matrix(rot_matrix)
-        self.orient_x = quat[0]
-        self.orient_y = quat[1]
-        self.orient_z = quat[2]
-        self.orient_w = quat[3]
-
-    def degrees_from_qt(self):
-
-        self.qt_from_rmat()
-
-        # converting quaternion to euler in radians for comming adjustment for yaw from revit to match rviz orientation:
-
-        orientation_list = [self.orient_x, self.orient_y , self.orient_z, self.orient_w ]
-        (roll_x, pitch_y, yaw_z) = euler_from_quaternion(orientation_list)
-
-        # converting euler from radians to degrees for easier understanding and adjusting yaw from revit to match rviz orientation:  
-
-        self.euler_x = math.degrees(roll_x) 
-        self.euler_y = math.degrees(pitch_y) 
-        self.euler_z = math.degrees(yaw_z) 
+        # self.get_logger().info(f"head_roll: {self.head_roll},head_pitch: {self.head_pitch},head_yaw: {self.head_yaw}")  
 
     def timer_callback(self):
 
@@ -194,7 +171,6 @@ def main(args=None):
         print(f"quitting the program...")
         panel.destroy_node()
     exit(0)
-
 
 if __name__=='__main__':
     main()

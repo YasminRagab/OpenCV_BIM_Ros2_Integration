@@ -1,5 +1,4 @@
 from ament_index_python.packages       import get_package_share_path
-
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.actions                import Node
 from launch.substitutions              import Command, LaunchConfiguration
@@ -75,7 +74,6 @@ def generate_launch_description():
                             executable = "orientation",
                             output     = "screen",
                             namespace  = None)
-
 
     ld.add_action(main_node)
     ld.add_action(model_arg)
