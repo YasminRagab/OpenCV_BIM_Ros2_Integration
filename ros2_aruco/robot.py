@@ -1,26 +1,19 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState, Joy
-from geometry_msgs.msg import Quaternion, Vector3, PoseArray, Pose
+from geometry_msgs.msg import Quaternion, Vector3, PoseArray, Pose, Transform
 from tf2_ros import TransformBroadcaster, TransformStamped
 import tf_transformations as tf_trans
-from tf_transformations import euler_from_quaternion, quaternion_multiply
+from tf_transformations import euler_from_quaternion
 import numpy as np
-import math # Math library
-from visualization_msgs.msg  import Marker
+import math
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
 from tf2_ros import TransformException
 
-
-
 class MyRobot(Node):
     def __init__(self,name):
         super().__init__(name)
-
-        # Creating a timer for a log info callback:
-
-        # self.create_timer(0.5, self.timer_callback)
 
         # Creating a speed factor attribute for slowing the speed recieved from the joystick to control the robot movement:
 
@@ -31,25 +24,17 @@ class MyRobot(Node):
         self.x = 0.0
         self.y = 0.0
 
-        # Defining attribute for robot arm horizontal rotation, vertical tiliting and extension:
+        # Defining attributes for robot arm horizontal rotation, vertical tiliting and extension:
 
         self.arm_rot = 0.0
         self.arm_tilt = 0.0
         self.arm_ext = 0.0
 
-        #
+        # Defining attributes for openCV aruco pose:
 
         self.cv_roll = 0.0
         self.cv_pitch = 0.0
         self.cv_yaw = 0.0
-
-        #
-
-        self.trans_roll = 0.0
-        self.trans_pitch = 0.0
-        self.trans_yaw = 0.0
-
-
 
         # Defining attributes for robot end effector (head manipulator) orientation:
 
@@ -57,26 +42,23 @@ class MyRobot(Node):
         self.head_pitch = 0.0
         self.head_yaw = 0.0
 
-        # Defining attributes for panel marker orientation:
+        # Defining attributes for needed orientation end effector (head manipulator):
 
-        # self.panel_roll = 0.0
-        # self.panel_pitch = 0.0
-        # self.panel_yaw = 0.0
+        self.trans_roll = 0.0
+        self.trans_pitch = 0.0
+        self.trans_yaw = 0.0
+
+        # Defining attribute for openCV twin posing joystick switch:
 
         self.cv = 0.0
-        self.auto = 0.0
 
         # Creating a subscriber that retrieves pose messages published from the aruco marker node:
 
         self.pose_sub = self.create_subscription(Pose, 'aruco_poses', self.pose_callback, 10)
 
-        # Creating a subscriber that retrieves pose messages published from the panel marker node:
-
-        self.panel_marker_sub = self.create_subscription(Marker, 'glass_panel_rviz', self.panel_marker_callback, 10)
         # Creating a subscriber that recieves messages from joystick:
 
         self.joystcik_sub = self.create_subscription(Joy, 'joy', self.getJoystickInput, 10)
-
 
         # creating a broadcaster that will publish the (Transformstamoed) base frame transform information in reference to the world (odom) frame:
 
@@ -91,14 +73,17 @@ class MyRobot(Node):
         self.jointstate.name = ['rotation', 'tilt','extension', 'h_yaw', 'h_roll', 'h_pitch']
         self.pub = self.create_publisher(JointState, 'joint_states', 10)
 
+        # creating transform_listener to calculate th head frame transform information in reference to the world (odom) frame:
 
-        # creating transform_listener
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer , self)
-
         self.target_frame ="Head"
         self.start_frame = "Base"
-        self.get_logger().info(f"{name} is on")
+
+        # creating a publisher that sends the head frame transform information in reference to the world (odom) frame:
+
+        self.head_trans = TransformStamped()
+        self.trans_pub   = self.create_publisher(TransformStamped, 'head_transformation', 10)
 
     def pose_callback(self, msg):
 
@@ -122,65 +107,20 @@ class MyRobot(Node):
             self.cv_roll = self.cv_roll + 180
         else:
             self.cv_roll = 0
-
-        self.cv_yaw =  self.cv_yaw * (-1)
         self.cv_pitch =  self.cv_pitch * (-1)
-
-
-
-    def panel_marker_callback(self, msg):
-
-        # Retrieving panel marker pose message and converting it from quaternion to euler radians:
-
-        panel = msg
-        panel_quat = [panel.pose.orientation.x, panel.pose.orientation.y, panel.pose.orientation.z , panel.pose.orientation.w]
-
-
-        print(f'self.panel_quat:{panel_quat}' )
-
-        
-
-        # (panel_roll_x, panel_pitch_y, panel_yaw_z) = euler_from_quaternion(panel_orientation_list)
-
-        # Converting euler radians to degrees for easier control:
-
-        # self.panel_roll  = math.degrees(panel_roll_x)
-        # self.panel_pitch = math.degrees(panel_pitch_y)
-        # self.panel_yaw   = math.degrees(panel_yaw_z)
-
-        try:
-
-            head_trans =  self.tf_buffer.lookup_transform(self.target_frame, self.start_frame, rclpy.time.Time())
-
-            trans_quat = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , head_trans.transform.rotation.w]
-            trans_quat_inv = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , (head_trans.transform.rotation.w *-1)]
-
-            needed_rot = tf_trans.quaternion_multiply(panel_quat , trans_quat_inv)
-
-            (t_roll_x, t_pitch_y, t_yaw_z) = euler_from_quaternion(needed_rot)
-
-            # Converting euler radians to degrees for easier control:
-
-            self.trans_roll = math.degrees(t_roll_x)
-            self.trans_pitch = math.degrees(t_pitch_y)
-            self.trans_yaw= math.degrees(t_yaw_z)
-
-        except TransformException as ex : 
-            self.get_logger().info(f"I don't see any transform yet")
-
+        self.cv_yaw =  self.cv_yaw * (-1)
 
     def getJoystickInput(self, msg):
 
-        
-
         # Assigning joystick output to robot movement attributes:
 
-        self.x += self.speed_factor * msg.axes[6]
-        self.y += self.speed_factor * msg.axes[7]
+        self.x += self.speed_factor * msg.axes[3]
+        self.y += self.speed_factor * msg.axes[2]
         self.arm_rot += msg.axes[0]
         self.arm_tilt += msg.axes[1]
         self.arm_ext += self.speed_factor * msg.buttons[4]
         self.arm_ext -= self.speed_factor * msg.buttons[5]
+        self.cv =   msg.buttons[7] 
 
         # Setting robot movement constrains:
 
@@ -188,115 +128,37 @@ class MyRobot(Node):
             self.arm_tilt = 0
         if self.arm_tilt <=-60:
             self.arm_tilt = -60
-
         if self.arm_ext >= 1.1:
             self.arm_ext = 1.1
         if self.arm_ext <= 0.0:
             self.arm_ext = 0.0
 
-
-        self.auto = msg.buttons[6] 
-        self.cv =   msg.buttons[7] 
+        # Real-time twin pose of aruco by manipulating head:
 
         if self.cv > 0.0:
-
             self.head_roll = self.cv_roll
             self.head_pitch = self.cv_pitch
             self.head_yaw = self.cv_yaw
-
-        elif self.auto > 0.0: 
-
-            self.head_roll = self.trans_roll
-            self.head_pitch = self.trans_pitch
-            self.head_yaw = self.trans_yaw
-
         
+        # Assigning joystick output to attributes for manual robot head orientation:
 
-        self.head_roll  += msg.buttons[0]
-        self.head_pitch += msg.buttons[2]
-        self.head_yaw   += msg.buttons[1]
-        self.head_yaw   -= msg.buttons[3]
+        self.head_roll +=   msg.axes[5]
+        self.head_pitch +=  msg.axes[4]
+        self.head_yaw += msg.buttons[1]
+        self.head_yaw -= msg.buttons[3]
 
+        # Setting head rotation constrains:
 
-
-
-
-            
-
-        # # Setting head rotation constrains:
-
-        # if self.head_roll >=60:
-        #     self.head_roll = 60
-        # if self.head_roll <=-60:
-        #     self.head_roll = -60
-
-        # if self.head_pitch >=60:
-        #     self.head_pitch = 60
-        # if self.head_pitch <=-60:
-        #     self.head_pitch = -60   
-
-        # self.end_eff_trans()
-
-
-
-
-        
-
-
-
-
-
-    # def end_eff_trans(self):
-
-    #     # Retrieving aruco pose message and converting it from quaternion to euler radians:
-
-
-    #     try:
-
-    #         head_trans =  self.tf_buffer.lookup_transform(self.target_frame, self.start_frame, rclpy.time.Time())
-
-    #         trans_quat = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , head_trans.transform.rotation.w]
-    #         trans_quat_inv = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , (head_trans.transform.rotation.w *-1)]
-
-    #         # print(f'self.panel_quat:{self.panel_quat}' )
-    #         # print(f'trans_quat_inv: {trans_quat_inv}')
-
-
-    #         needed_rot = tf_trans.quaternion_multiply(self.panel_quat , trans_quat_inv)
-
-    #         # (t_roll_x, t_pitch_y, t_yaw_z) = euler_from_quaternion(needed_rot)
-
-    #         # # Converting euler radians to degrees for easier control:
-
-    #         # self.trans_roll = math.degrees(t_roll_x)
-    #         # self.trans_pitch = math.degrees(t_pitch_y)
-    #         # self.trans_yaw= math.degrees(t_yaw_z)
-
-        # except TransformException as ex : 
-        #     self.get_logger().info(f"I don't see any transform yet")
-
-        # self.get_logger().info(f"current orientation: roll: {self.trans_roll}, pitch: {self.trans_pitch}, yaw: {self.trans_yaw}") 
-        
-        # self.get_logger().info(f"current orientation: roll: {self.head_roll}, pitch: {self.head_pitch}, yaw: {self.head_yaw}") 
-
-
-        # self.get_logger().info(f"target orientation: roll: {self.panel_roll}, pitch: {self.panel_pitch}, yaw: {self.panel_yaw}") 
-
-        # self.get_logger().info(f"needed rotation: roll: {self.panel_roll - self.trans_roll}, pitch: {self.panel_yaw - self.trans_pitch}, yaw: {self.panel_yaw - self.trans_yaw}") 
+        if self.head_roll >=60:
+            self.head_roll = 60
+        if self.head_roll <=-60:
+            self.head_roll = -60
+        if self.head_pitch >=60:
+            self.head_pitch = 60
+        if self.head_pitch <=-60:
+            self.head_pitch = -60   
 
         self.broadcastTransformations()
-
-        
-
-            
-
-
-
-        
-
-
-
-
 
     def broadcastTransformations(self):
 
@@ -311,7 +173,7 @@ class MyRobot(Node):
         self.odom_trans.transform.translation.y = self.y
         self.odom_trans.transform.translation.z = 0.0
 
-        # Setting the transformstamoed rotation to zero: 
+        # Setting the transformstamped rotation to zero: 
 
         q= tf_trans.quaternion_from_euler(0.0, 0.0, 0.0)
         self.odom_trans.transform.rotation = Quaternion(x = q[0], y = q[1], z = q[2], w = q[3])
@@ -328,16 +190,22 @@ class MyRobot(Node):
 
         self.jointstate.position = [np.radians(self.arm_rot), np.radians(self.arm_tilt), self.arm_ext, np.radians(self.head_yaw), np.radians(self.head_roll),  np.radians(self.head_pitch)]
 
-        # Checking if the jointstate positions values match the number of defined jointstates before publishing joinstate positions for rviz: 
+        # publishing jointstate message: 
 
-        if len (self.jointstate.name) == len (self.jointstate.position):
-            self.pub.publish(self.jointstate)
-        else:
-            print('check position')
+        self.pub.publish(self.jointstate)
 
+        # Calculating end effector (head manipulator) orientation transformation with reference to world:
 
+        try:
 
+            self.head_trans =  self.tf_buffer.lookup_transform(self.target_frame, self.start_frame, rclpy.time.Time())
 
+        # Publishing the head frame transform information in reference to the world (odom) frame:
+
+            self.trans_pub.publish(self.head_trans)
+
+        except TransformException as ex : 
+            self.get_logger().info(f"I don't see any transform yet")
 
 def main(args=None):
     rclpy.init(args=args)
@@ -348,7 +216,6 @@ def main(args=None):
         print(f"quitting the program...")
         robot.destroy_node()
     exit(0)
-
 
 if __name__=='__main__':
     main()

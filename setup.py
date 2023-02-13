@@ -30,7 +30,8 @@ setup(
         'console_scripts': [
             'aruco_node2 = ros2_aruco.aruco_node2:main',
             'robot = ros2_aruco.robot:main',
-            'panel = ros2_aruco.panel:main'
+            'panel = ros2_aruco.panel:main',
+            'orientation = ros2_aruco.orientation:main'
         ],
     },
 )
