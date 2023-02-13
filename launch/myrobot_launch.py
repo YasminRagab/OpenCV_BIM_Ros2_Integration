@@ -65,11 +65,17 @@ def generate_launch_description():
                      namespace  = None,
                      arguments  = ["-d", LaunchConfiguration("rvizconfig")])
 
-    #Configure Opencv for aruco-marker detection
+    # Configure Opencv for aruco-marker detection
     opencv_node = Node(package    = "ros2_aruco",
                        executable = "aruco_node2",
                        output     = "screen",
                        namespace  = None)
+    # Configure  Orientation node
+    orientation_node = Node(package    = "ros2_aruco",
+                            executable = "orientation",
+                            output     = "screen",
+                            namespace  = None)
+
 
     ld.add_action(main_node)
     ld.add_action(model_arg)
@@ -79,5 +85,6 @@ def generate_launch_description():
     ld.add_action(rviz_arg)
     ld.add_action(rviz_node)
     ld.add_action(opencv_node)
+    ld.add_action(orientation_node)
 
     return ld
