@@ -11,10 +11,6 @@ from numpy              import mat,block
 from tf_transformations import euler_from_quaternion
 from ament_index_python import get_package_share_directory
 
-
-
-
-
 class Orientation(Node):
     def __init__(self,name):
         super().__init__(name)
