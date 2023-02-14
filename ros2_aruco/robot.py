@@ -67,8 +67,8 @@ class MyRobot(Node):
         # creating transform_listener to calculate th head frame transform information in reference to the world (odom) frame:
         self.tf_buffer    = Buffer()
         self.tf_listener  = TransformListener(self.tf_buffer , self)
-        self.target_frame ="Head"
-        self.start_frame  = "Base"
+        self.target_frame = "Head"
+        self.start_frame  = "world"
 
         # creating a publisher that sends the head frame transform information in reference to the world (odom) frame:
         self.head_trans  = TransformStamped()
