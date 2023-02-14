@@ -103,6 +103,8 @@
         <limit effort='100' velocity='1' lower='0' upper='1.1'/>
     </joint>
 
+    <!-- Head rootations -->
+
     <joint name="h_yaw" type="continuous">
         <parent link="Translation"/>
         <child  link="V_Motor"/>

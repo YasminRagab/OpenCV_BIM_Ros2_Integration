@@ -115,10 +115,10 @@ class GlassPanel(Node):
 
         self.text.color.a = 1.0
         self.text.color.r = 1.0
-        self.text.color.g = 1.0
-        self.text.color.b = 1.0
+        self.text.color.g = 0.0
+        self.text.color.b = 0.0
 
-        self.text.text = f"Target"
+        self.text.text = f"(Target_State)"
         self.array.markers.append(self.text)
 
     def trans_callback(self, msg):
@@ -157,11 +157,11 @@ class GlassPanel(Node):
 
         self.marker.color.a = 1.0
         self.marker.color.r = 1.0
-        self.marker.color.g = 1.0
-        self.marker.color.b = 1.0
+        self.marker.color.g = 0.0
+        self.marker.color.b = 0.0
 
         # applying text content in the call back function to change the text inside message from transformation each time called :
-        self.marker.text = f"Roll={round(self.head_roll,4)}\nPitch={round(self.head_pitch,4)}\nYaw={round(self.head_yaw,4)}"
+        self.marker.text = f"(Roll={round(self.head_roll,4)})\n(Pitch={round(self.head_pitch,4)})\n(Yaw={round(self.head_yaw,4)})"
         self.array.markers.append(self.marker)
         
     def timer_callback(self):

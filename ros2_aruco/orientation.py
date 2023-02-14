@@ -118,10 +118,10 @@ class Orientation(Node):
         self.required_pitch = self.panel_pitch - self.head_pitch
         self.required_yaw   = self.panel_yaw - self.head_yaw
 
-        # # Real-time orientation values display:
-        # self.get_logger().info(f"head_roll: {self.head_roll},head_pitch: {self.head_pitch},head_yaw: {self.head_yaw}")  
-        # self.get_logger().info(f"panel_roll: {self.panel_roll},panel_pitch: {self.panel_pitch},panel_yaw: {self.panel_yaw}")
-        # self.get_logger().info(f"required_roll: {self.required_roll},required_pitch: {self.required_pitch},required_yaw: {self.required_yaw}")  
+        # Real-time orientation values display:
+        self.get_logger().info(f"head_roll: {self.head_roll},head_pitch: {self.head_pitch},head_yaw: {self.head_yaw}")  
+        self.get_logger().info(f"panel_roll: {self.panel_roll},panel_pitch: {self.panel_pitch},panel_yaw: {self.panel_yaw}")
+        self.get_logger().info(f"required_roll: {self.required_roll},required_pitch: {self.required_pitch},required_yaw: {self.required_yaw}")  
 
 def main(args=None):
     rclpy.init(args=args)
