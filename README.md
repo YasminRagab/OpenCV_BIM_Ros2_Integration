@@ -13,7 +13,10 @@ ROS2 package uses OpenCV aruco marker pose detection and BIM integration for gla
 $ mkdir -p ptp_ws/src/
 ```
 * Make sure you have a ROS2 Driver for V4L USB Cameras.
+* Change the viedo device parameter in the usb_camera prams.yaml, according to your usb outlet used for your usb camera.
 * If not clone the usb cam demo ros2 branch into the src folder alongside this repository [usb_cam](http://wiki.ros.org/usb_cam)
+* For this project we are using Dictionary orignal aruco `Marker ID 1`
+    * You can generate it online, for example you can use this [Link](https://chev.me/arucogen/)
 * Clone this package into your source folder and don't forget to clone the ros2_aruco_interfaces too.
 
 ```
@@ -43,6 +46,7 @@ $ . install/setup.bash
 $ ros2 launch usb_cam demo_launch.py
 ```
 * Make sure your joystick is connected
+* Ajust your joystick axies and buttons in the robot.py file according to your joystick
 * Launch the package
 
 ``` 
