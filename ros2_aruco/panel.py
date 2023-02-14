@@ -121,13 +121,35 @@ class GlassPanel(Node):
         self.text.text = f"Target"
         self.array.markers.append(self.text)
 
-        # Create a marker message to display the text
+    def trans_callback(self, msg):
+
+        # Retrieving head rotation (current state) from TransformStamped message and converting it from quaternion to euler radians:
+        head_trans = msg
+        trans_quat = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , head_trans.transform.rotation.w]
+        (t_roll_x, t_pitch_y, t_yaw_z) = euler_from_quaternion(trans_quat)
+
+        # Converting euler radians to degrees for easier understanding:
+        self.head_roll  = math.degrees(t_roll_x)
+        self.head_pitch = math.degrees(t_pitch_y)
+        self.head_yaw   = math.degrees(t_yaw_z)
+
+        # Create a marker message to display the head orientation
         self.marker = Marker()
         self.marker.header.frame_id = 'world'
         self.marker.ns = ''
         self.marker.header.stamp = self.get_clock().now().to_msg()
         self.marker.id = 3
         self.marker.type = Marker().TEXT_VIEW_FACING
+
+        # importing msg position to retrieve the marker text of transformation position from it :
+        self.marker.pose.position.x = -msg.transform.translation.x
+        self.marker.pose.position.y = -msg.transform.translation.y
+        self.marker.pose.position.z = -msg.transform.translation.z
+    
+        self.marker.pose.orientation.x = -msg.transform.rotation.x
+        self.marker.pose.orientation.y = -msg.transform.rotation.y
+        self.marker.pose.orientation.z = -msg.transform.rotation.z
+        self.marker.pose.orientation.w = -msg.transform.rotation.w
         
         self.marker.scale.x = 1.0
         self.marker.scale.y = 1.0
@@ -138,36 +160,10 @@ class GlassPanel(Node):
         self.marker.color.g = 1.0
         self.marker.color.b = 1.0
 
-
-    def trans_callback(self, msg):
-
-        # Retrieving head rotation (current state) from TransformStamped message and converting it from quaternion to euler radians:
-        head_trans = msg
-        trans_quat = [head_trans.transform.rotation.x, head_trans.transform.rotation.y, head_trans.transform.rotation.z , head_trans.transform.rotation.w]
-        (t_roll_x, t_pitch_y, t_yaw_z) = euler_from_quaternion(trans_quat)
-        
-        # importing msg position to retrieve the marker text of transformation position from it :
-        self.marker.pose.position.x = -msg.transform.translation.x
-        self.marker.pose.position.y = -msg.transform.translation.y
-        self.marker.pose.position.z = -msg.transform.translation.z
-    
-        self.marker.pose.orientation.x = -msg.transform.rotation.x
-        self.marker.pose.orientation.y = -msg.transform.rotation.y
-        self.marker.pose.orientation.z = -msg.transform.rotation.z
-        self.marker.pose.orientation.w = -msg.transform.rotation.w
-
-        # Converting euler radians to degrees for easier understanding:
-        self.head_roll  = math.degrees(t_roll_x)
-        self.head_pitch = math.degrees(t_pitch_y)
-        self.head_yaw   = math.degrees(t_yaw_z)
-
         # applying text content in the call back function to change the text inside message from transformation each time called :
         self.marker.text = f"Roll={round(self.head_roll,4)}\nPitch={round(self.head_pitch,4)}\nYaw={round(self.head_yaw,4)}"
         self.array.markers.append(self.marker)
-
-        self.get_logger().info(f"head_roll: {self.head_roll},head_pitch: {self.head_pitch},head_yaw: {self.head_yaw}")  
         
-
     def timer_callback(self):
 
         self.pub_rviz.publish(self.array)
