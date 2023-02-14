@@ -46,6 +46,7 @@ $ . install/setup.bash
 $ ros2 launch usb_cam demo_launch.py
 ```
 * Make sure your joystick is connected
+* Ajust your joystick axies and buttons in the robot.py file according to your joystick
 * Launch the package
 
 ``` 
