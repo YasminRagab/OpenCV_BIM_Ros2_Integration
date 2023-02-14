@@ -1,3 +1,4 @@
+##This node estimates Aruco marker pose from usb-cam and publishes a pose message
 
 import rclpy
 import cv2

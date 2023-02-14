@@ -1,3 +1,7 @@
+##This node is resbonsible for controling the urdf model using joy-stick by publishing joinstate message. 
+##It also use the aruco pose message for real-time twin movement of the aruco marker.
+##It also publish transformstamped message for head frame transformation in reference to world.
+
 import rclpy
 import math
 

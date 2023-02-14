@@ -1,3 +1,7 @@
+##This node extracts panel target state from BIM text file.
+##It also recieves the transformstamped message for current state pose.
+##This node then compare the two states to calculate the required pose alignment.
+
 import rclpy
 import math 
 import codecs

@@ -1,3 +1,7 @@
+##This node publish the panel marker (Target state) from BIM model for RVIZ.
+##It also publish view marker showing BIM environment (surroundings) for RVIZ.
+##It also publish text marker displaying real-time current state pose of the manipulating head for RVIZ.
+
 import rclpy
 import math
 import codecs
