@@ -1,0 +1,2 @@
+urdf_model/Meshes/Head.dae filter=lfs diff=lfs merge=lfs -text
+*.dae filter=lfs diff=lfs merge=lfs -text
