@@ -97,8 +97,8 @@ class MyRobot(Node):
             self.cv_roll  = self.cv_roll + 180
         else:
             self.cv_roll = 0
+        self.cv_roll =  self.cv_roll * (-1)
         self.cv_pitch =  self.cv_pitch * (-1)
-        self.cv_yaw   =  self.cv_yaw * (-1)
 
     def getJoystickInput(self, msg):
 
